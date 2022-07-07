@@ -1,0 +1,44 @@
+Now that you have the initial structure in place, navigate to the root directory and run:  
+mvn clear install                                                                          
+____________________________________________________________________________________________
+Download docker images and start the containers
+docker-compose -f docker-DOcompose.yaml up -d
+
+(postgres, monitoring/prometheus,zookeeper, kafka) 
+____________________________________________________________________________________________
+____________________________________________________________________________________________
+NEW MICROSERVICE
+mvn io.quarkus:quarkus-maven-plugin:2.3.0.Final:create -DprojectGroupId=io.quarkus.workshop.super-heroes -DprojectArtifactId=rest-villains -DclassName="io.quarkus.workshop.superheroes.villain.VillainResource" -Dpath="api/villains" -Dextensions="resteasy-reactive-jackson"
+_____________________________________________________________________________________________
+Development mode
+./mvnw quarkus:dev + test with postman or curl
+_____________________________________________________________________________________________
+Testing 
+write unit tests + launch  ./mvnw test
+_____________________________________________________________________________________________
+Packaging and Running the Application
+
+./mvnw package
+java -jar target/quarkus-app/quarkus-run.jar
+______________________________________________________________________________________________
+Installing the PostgreSQL Dependency, Hibernate with Panache and Hibernate Validator
+
+./mvnw quarkus:add-extension -Dextensions="jdbc-postgresql,hibernate-orm-panache,hibernate-validator"
+______________________________________________________________________________________________
+______________________________________________________________________________________________
+Create new entity path code
+Entity wich extends PanacheEntity + Service + Resource + ResourceTest
+Postman tests + ./mvnw test
+______________________________________________________________________________________________
+Configuring Hibernate
+# drop and create the database at startup (use `update` to only update the schema)
+quarkus.hibernate-orm.database.generation=drop-and-create
+______________________________________________________________________________________________
+Configuring Logging
+______________________________________________________________________________________________
+Configuring Quarkus Listening Port
+______________________________________________________________________________________________
+Configuring Database data
+______________________________________________________________________________________________
+./mvnw quarkus:dev
+

@@ -1,0 +1,7 @@
+\list or \l: list all databases
+\c <db name>: connect to a certain database
+\dt: list all tables in the current database using your search_path
+\dt *: list all tables in the current database regardless your search_path
+\dn: list all schemas
+
+SELECT * FROM pg_tables WHERE schemaname='schemaname'; : list all tables in a schema

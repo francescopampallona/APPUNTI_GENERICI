@@ -1,0 +1,11 @@
+https://towardsdatascience.com/15-docker-commands-you-should-know-970ea5203421
+______________________________________________
+Delete a particular container
+docker rm  {container_id}
+______________________________________________
+Delete all containers that are not running.
+docker container rm $(docker ps -a -q)
+______________________________________________
+Kill all running containers.
+docker container kill $(docker ps -q)
+______________________________________________

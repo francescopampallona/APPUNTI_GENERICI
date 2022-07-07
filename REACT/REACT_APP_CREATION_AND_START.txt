@@ -1,0 +1,6 @@
+npm init react-app my-app
+
+______________________________
+START APP
+npm start
+

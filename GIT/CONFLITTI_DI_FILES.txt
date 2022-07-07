@@ -1,0 +1,4 @@
+In caso di conflitti fare 
+git stash
+e una volta fatto il pull
+git stash pop per fare il merge

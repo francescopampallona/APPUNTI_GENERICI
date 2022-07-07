@@ -1,0 +1,16 @@
+Adding the Reactive Messaging Dependency
+mvn quarkus:add-extension -Dextensions="quarkus-smallrye-reactive-messaging-kafka"
+_________________________________________________________________________________________________
+DESERIALIZER FOR KAFKA RECORD
+We also need to a deserializer that will receive the Kafka recrod and create the Fight instances. 
+_________________________________________________________________________________________________
+Consuming data coming from kafka
+@Incoming and @Outgoing
+_________________________________________________________________________________________________
+Kafka configuration in application.properties
+mp.messaging.incoming.{channel}.connector=smallrye-kafka
+mp.messaging.incoming.{channel}.value.deserializer={path.to.deserializer} 
+mp.messaging.incoming.{channel}.auto.offset.reset=earliest
+mp.messaging.incoming.{channel}.broadcast=true
+_________________________________________________________________________________________________
+

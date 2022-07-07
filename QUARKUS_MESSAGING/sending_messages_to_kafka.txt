@@ -1,0 +1,13 @@
+Adding the Reactive Messaging Dependency
+./mvnw quarkus:add-extension -Dextensions="io.quarkus:quarkus-smallrye-reactive-messaging-kafka"
+____________________________________________________________________________________________________
+Connecting Imperative and Reactive Using an Emitter
+
+@Channel("fights") Emitter<Fight> emitter;
+emitter.send(fight).toCompletableFuture().join();
+____________________________________________________________________________________________________
+Connecting to Kafka
+
+mp.messaging.[incoming|outgoing].channel.attribute=value
+In this case channel name is fight
+____________________________________________________________________________________________________

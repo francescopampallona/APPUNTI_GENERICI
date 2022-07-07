@@ -1,0 +1,14 @@
+To see all the diff in tracked files but not staged:
+
+git diff
+_________________________________________________________
+To see the diff only for a file:
+git diff path/to/a/given/file
+_________________________________________________________
+To see the diff in a given sub-directory of your project:
+git diff path/to/a/dir/
+_________________________________________________________
+If you have already staged the changes with git add, you
+can see what patch you have staged with:
+git diff --staged
+_________________________________________________________

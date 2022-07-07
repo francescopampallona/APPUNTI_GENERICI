@@ -1,0 +1,1 @@
+./mvnw quarkus:add-extension -Dextensions="name_of_extension"
