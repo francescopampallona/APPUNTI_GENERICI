@@ -1,0 +1,7 @@
+Grant All Privileges ON *.* to 'root'@'%' Identified By 'root_password'; 
+FLUSH PRIVILEGES;
+
+
+
+sudo vim /etc/mysql/mariadb.conf.d/50-server.cnf
+bind-address            = 0.0.0.0
