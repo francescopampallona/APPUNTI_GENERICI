@@ -1,3 +1,5 @@
+npx create-react-app my-app
+______________________________
 npm init react-app my-app
 
 ______________________________
