@@ -1,0 +1,2 @@
+COMPILE C LANGUAGE
+gcc -Wall hello_world.c -o bin/hello_world
