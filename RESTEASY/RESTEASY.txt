@@ -1,0 +1,14 @@
+ MultivaluedMap<String, String> obj = new MultivaluedMapImpl<>();
+        obj.add("client_id","multi-tenant-client");
+        obj.add("client_secret", oidcTenantConnection !=null ? oidcTenantConnection.oidcSecret : clientSecret);
+        obj.add("scope", "openid");
+        obj.add("grant_type", "password");
+        obj.add("username", loginRequest.getUsername());
+        obj.add("password", loginRequest.getPassword());
+ ResteasyClientBuilderImpl resteasyClientBuilder = new ResteasyClientBuilderImpl().connectionPoolSize(10);
+ ResteasyClient client = resteasyClientBuilder.build();
+ResteasyWebTarget target = client.target(oidcTenantConnection!=null ?
+                oidcTenantConnection.stringConnection : url.getProtocol() + "://" + url.getHost() + ":" + url.getPort() + "/auth/realms/" + loginRequest.getTenant() + "/protocol/openid-connect/token");
+        Entity<Form> entity = Entity.form(obj);
+        Response response = target.request(MediaType.APPLICATION_FORM_URLENCODED).post(entity);
+        String value = response.readEntity(String.class);
