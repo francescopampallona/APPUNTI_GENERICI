@@ -1,0 +1,38 @@
+sftp user@server_ipaddress
+------------------------------------------
+sftp> lpwd
+Local directory: /LocalDirectory
+sftp> pwd
+Remote directory: /RemoteDirectory
+------------------------------------------
+Vediamo come trasferire un file da un server remoto al tuo computer locale:
+get /RemoteDirectory/filename.txt
+------------------------------------------
+Per scaricare più file con SFTP
+mget /etc/*.conf
+------------------------------------------
+Trasferimento di file dalla macchina locale a un server remoto
+put /home/user-name/example.txt /root
+------------------------------------------
+Ora troveremo il file nella directory principale del server remoto. 
+Puoi anche provare a trasferire più file usando il  comando mput
+
+mput /home/user-name/*.txt /root
+-----------------------------------------
+Il comando pwd, ad esempio, è sempre utile per farti sapere in quale 
+directory di lavoro ti trovi attualmente
+
+sftp> pwd
+Remote directory: /RemoteDirectory
+
+sftp> lpwd
+Local directory: /LocalDirectory
+------------------------------------------
+ls
+lls
+------------------------------------------
+cd name_of_directory
+lcd name_of_directory
+-----------------------------------------
+mkdir name_of_directory
+lmkdir name_of_directory

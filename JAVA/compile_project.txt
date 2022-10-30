@@ -1,0 +1,9 @@
+
+javac -classpath ../../lib/cldc_10.jar;../../lib/midp2.0.jar -d tmpclasses src/*.java
+
+-d is for the destination folder
+
+
+
+https://docs.oracle.com/javame/dev-tools/jme-sdk-3.0-mac/UserGuide-html/z400007747176.html
+https://docs.oracle.com/javase/7/docs/technotes/tools/windows/javac.html
