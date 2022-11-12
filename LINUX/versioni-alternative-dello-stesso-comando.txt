@@ -1,0 +1,1 @@
+sudo update-alternative {nome_comando}
