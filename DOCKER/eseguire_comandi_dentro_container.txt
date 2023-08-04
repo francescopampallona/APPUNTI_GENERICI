@@ -1,0 +1,3 @@
+docker exec -it {nome_o_id_container} /bin/bash
+_________________________________________________
+Questo ti aprirà una sessione bash nel contenitore, dove potrai eseguire altri comandi a tuo piacimento. Per uscire dalla sessione, puoi digitare exit.
