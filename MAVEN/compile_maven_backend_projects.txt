@@ -1,0 +1,3 @@
+./mvnw clean install -s .\settings.xml -DskipTests
+
+Usare l'opzione "-s .\settings.xml" se c'è un repository personalizzato (specificato in settings.xml)
