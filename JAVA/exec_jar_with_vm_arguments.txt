@@ -1,0 +1,1 @@
+java "-Dspring.profiles.active=dev,local" "-Dspring.config.additional-location=classpath:local-config/" -jar nomeProgetto.jar
