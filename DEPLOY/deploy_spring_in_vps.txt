@@ -1,0 +1,9 @@
+cp progetto.jar /opt/progetto/progetto.jar
+
+sudo systemctl restart progetto
+
+sudo systemctl status progetto
+
+journalctl -u progetto -n 50 -f
+
+In /etc/systemd/system/progetto.service ci sono le impostazioni per avviare il progetto
