@@ -1,0 +1,8 @@
+cp -r progetto/browser/* /var/www/progetto-frontend/browser/
+
+nano /etc/nginx/sites-available/progetto
+
+sudo systemctl reload nginx
+
+
+
