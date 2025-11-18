@@ -2,7 +2,10 @@ cp -r progetto/browser/* /var/www/progetto-frontend/browser/
 
 nano /etc/nginx/sites-available/progetto
 
+sudo ln -s /etc/nginx/sites-available/progetto /etc/nginx/sites-enabled/
+
 sudo systemctl reload nginx
+
 
 
 
