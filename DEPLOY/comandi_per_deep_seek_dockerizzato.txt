@@ -3,8 +3,10 @@ docker run -d --gpus all --name ollama -p 11434:11434 -v ollama:/root/.ollama ol
 
 #DOWNLOAD DI UN MODELLO PICCOLO DI DEEPSEEK
 docker exec -it ollama ollama pull deepseek-r1:1.5b
+# AVVIO INTERATTIVO DEL MODELLO
 docker exec -it ollama ollama run deepseek-r1:1.5b
 
 #DOWNLOAD DI UN MODELLO PIU' AVANZATO DI DEEPSEEK
 docker exec -it ollama ollama pull deepseek-r1:7b
+# AVVIO INTERATTIVO DEL MODELLO
 docker exec -it ollama ollama run deepseek-r1:7b
