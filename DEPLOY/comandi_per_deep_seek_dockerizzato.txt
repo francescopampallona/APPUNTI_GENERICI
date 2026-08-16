@@ -3,6 +3,8 @@ docker run -d --name ollama -p 11434:11434 -v ollama:/root/.ollama ollama/ollama
 
 #DOWNLOAD DI UN MODELLO PICCOLO DI DEEPSEEK
 docker exec -it ollama ollama pull deepseek-r1:1.5b
-
-#AVVIO DEL MODELLO
 docker exec -it ollama ollama run deepseek-r1:1.5b
+
+#DOWNLOAD DI UN MODELLO PIU' AVANZATO DI DEEPSEEK
+docker exec -it ollama ollama pull deepseek-r1:7b
+docker exec -it ollama ollama run deepseek-r1:7b
