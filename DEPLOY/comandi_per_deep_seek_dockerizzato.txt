@@ -10,3 +10,10 @@ docker exec -it ollama ollama run deepseek-r1:1.5b
 docker exec -it ollama ollama pull deepseek-r1:7b
 # AVVIO INTERATTIVO DEL MODELLO
 docker exec -it ollama ollama run deepseek-r1:7b
+
+# DOWNLOAD DI DEEPSEEK CODER
+# Modello specializzato soprattutto nella programmazione
+docker exec -it ollama ollama pull deepseek-coder:6.7b
+
+# AVVIO INTERATTIVO DI DEEPSEEK CODER
+docker exec -it ollama ollama run deepseek-coder:6.7b
