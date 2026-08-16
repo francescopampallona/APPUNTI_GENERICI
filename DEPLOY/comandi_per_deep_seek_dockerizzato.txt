@@ -1,0 +1,8 @@
+#OLLAMA è il runtime/server che scarica il modello, lo carica in RAM/VRAM e ti espone un’API
+docker run -d --name ollama -p 11434:11434 -v ollama:/root/.ollama ollama/ollama
+
+#DOWNLOAD DI UN MODELLO PICCOLO DI DEEPSEEK
+docker exec -it ollama ollama pull deepseek-r1:1.5b
+
+#AVVIO DEL MODELLO
+docker exec -it ollama ollama run deepseek-r1:1.5b
